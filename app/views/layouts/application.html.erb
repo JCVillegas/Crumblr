@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crumblr</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+<ul class="nav nav-pills">
+  <li role="presentation"><%= link_to "Welceome", "/" %></li>
+  <li role="presentation"><%= link_to "About", "/about" %></li>
+  
+</ul>
+<%= yield %>
+</div>
+</body>
+</html>

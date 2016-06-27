@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Crumblr</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<head>
+	  <title>Crumblr</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<ul class="nav nav-pills pull-right">
+				  <li role="presentation"><%= link_to "Welcome", "/" %></li>
+				  <li role="presentation"><%= link_to "ManagePost", "/posts" %></li>
+				  <li role="presentation"><%= link_to "About", "/About" %></li>				  
+				</ul>
+				<h1><%= link_to "Crubmlr", "/" %><small>  // technophilia blog</small></h1>
 
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div class="container">
-<ul class="nav nav-pills">
-  <li role="presentation"><%= link_to "Welceome", "/" %></li>
-  <li role="presentation"><%= link_to "About", "/about" %></li>
-  
-</ul>
-<%= yield %>
-</div>
-</body>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<%= yield %>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
